@@ -1,0 +1,52 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "6b351834e897bf30745e66027610dd68",
+    "entities": [
+      {
+        "tableName": "gymlog",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`mGymLogId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `mExercise` TEXT, `mWeight` REAL NOT NULL, `mReps` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "mGymLogId",
+            "columnName": "mGymLogId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mExercise",
+            "columnName": "mExercise",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mWeight",
+            "columnName": "mWeight",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mReps",
+            "columnName": "mReps",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "mGymLogId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '6b351834e897bf30745e66027610dd68')"
+    ]
+  }
+}
