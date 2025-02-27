@@ -1,2 +1,2 @@
 # gymLog_v_sp22_student
-Project assignment in CST_338
+Starter code for the GymLog assignment in CST_338
